@@ -1,0 +1,206 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto Slab', serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(/RESOURCES/images/bg.svg) no-repeat center center/cover;
+    width: 100%;
+    height: 100vh;
+    padding-top: 30px;
+    overflow: hidden;
+    color: #011627;
+}
+
+h1{
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 80px;
+    background-color: #F9D949;
+    width: 90%;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+section {
+    width: 90%;
+    margin: auto;
+    padding-top: 50px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.time {
+    background-color: #F9D949;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    flex-basis: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time h1 {
+    font-size: 13.281vw;
+    position: relative;
+}
+
+.time h1 span {
+    font-size: 6vw;
+}
+
+.time h1 sup {
+    position: absolute;
+    top: 19%;
+    right: 0;
+    font-size: 2.734vw;
+}
+
+.date {
+    flex-basis: 38%;
+    background-color: #F9D949;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.date h2 {
+    font-size: 4.688vw;
+    font-weight: 900;
+}
+
+.date h3 {
+    font-size: 3.906vw;
+    font-weight: 500;
+}
+
+.sign {
+    position: absolute;
+    bottom: 55px;
+    right: 53px;
+    right: 30px;
+    z-index: -1;
+    width: 100px;
+    cursor: pointer;
+}
+
+p.attribution {
+    background-color: #F9D949;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 5px 20px;
+}
+
+p.attribution a {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    gap: 5px;
+}
+
+/* ------------------------- RESPONSIVENESS ------------------------*/
+
+/* TAB */
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 20px 30px;
+    }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 20px 20px;
+    }
+
+    nav .logo img, nav ul li a img {
+        width: 25px;
+    }
+
+    .time {
+        flex-basis: 100%;
+    }
+
+    .time h1 {
+        font-size: 22vw;
+    }
+
+    .time h1 span {
+        font-size: 10vw;
+    }
+
+    .time h1 sup {
+        font-size: 5vw;
+    }
+
+    .date {
+        margin-top: 20px;
+        flex-basis: 100%;
+    }
+
+    .date h2 {
+        font-size: 7.688vw;
+    }
+
+    .date h3 {
+        font-size: 4.906vw;
+    }
+
+    .sign {
+        bottom: 35px;
+        width: 70px;
+    }
+
+    p.attribution, p.attribution a {
+        font-size: 12px;
+    }
+    p.attribution a img {
+        width: 12px;
+        height: 12px;
+    }
+}
